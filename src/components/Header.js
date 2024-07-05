@@ -38,12 +38,16 @@ const Header = () => {
         };
     }, [handleScroll]);
 
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
     return (
         <header className={`bg-red-100 h-20 fixed w-full transition-transform duration-300 ${isScrollingUp && !isIdle ? 'translate-y-0' : '-translate-y-full'}`}>
             <div className="container mx-auto flex items-center justify-between h-full px-6">
                 <Link to={'/'}>
-                    <div>
-                        <img className='w-[40px]' src={Logo} alt="Logo" />
+                    <div onClick={scrollToTop}>
+                        <img className='w-[40px] cursor-pointer' src={Logo} alt="Logo" />
                     </div>
                 </Link>
                 <div>

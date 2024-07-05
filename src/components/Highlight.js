@@ -13,19 +13,31 @@ const Hightlight = () => {
     }, []);
 
     return (
-        <div className="bg-red-100 justify-center items-center pt-10">
-            <div className="Hightlight">
-                <motion.div ref={carousel} className="carousel" whileTap={{cursor:"grabbing"}}>
-                    <motion.div drag="x" dragConstraints={{ right: 0, left: -width }} className="inner-carousel">
-                        {images.map(image => {
-                            return(
-                                <motion.div className="item" key={image}>
-                                    <img src={image} alt="" />
-                                </motion.div>
-                            );
-                        })}
+        <div className="min-h-screen bg-red-100 justify-center items-center">
+            <div className="mx-40">
+                <div className="pt-16 mb-4">
+                    <h1 className="text-4xl lg:text-[70px] text-center leading-tight lg:leading-[1.1] font-light">
+                        Some of My Favorite Bika
+                    </h1>
+                </div>
+                <div className="Hightlight">
+                    <motion.div ref={carousel} className="carousel" whileTap={{cursor:"grabbing"}}>
+                        <motion.div drag="x" dragConstraints={{ right: 0, left: -width }} className="inner-carousel">
+                            {images.map(image => {
+                                return(
+                                    <motion.div className="item" key={image}>
+                                        <img src={image} alt="" />
+                                    </motion.div>
+                                );
+                            })}
+                        </motion.div>
                     </motion.div>
-                </motion.div>
+                </div>
+                <div className="mt-4 pb-8">
+                    <h1 className="text-4xl lg:text-[70px] text-center leading-tight lg:leading-[1.1] font-light">
+                        Love from your future husband 😘
+                    </h1>
+                </div>
             </div>
         </div>
     );

@@ -4,6 +4,17 @@ import Polaroid from "./Polaroid";
 const Journey = () => {
     return (
         <section className="min-h-screen bg-red-100 flex flex-col items-center">
+            <div className="mb-16">
+                <h1 className="text-4xl lg:text-[70px] text-center leading-tight lg:leading-[1.1] font-light">
+                    Level 0 Cute Innocent
+                </h1>
+                <h1 className="text-4xl lg:text-[70px] text-center leading-tight lg:leading-[1.1] font-light">
+                    TO
+                </h1>
+                <h1 className="text-4xl lg:text-[70px] text-center leading-tight lg:leading-[1.1] font-light">
+                    Level 10 Racist Fascism 💀
+                </h1>
+            </div>
             <div className="flex flex-row ml-14 mr-14 mb-14 items-center">
                 <Polaroid 
                     src="https://storage.googleapis.com/lbp-bucket/images/journey/journey-1.jpg"
